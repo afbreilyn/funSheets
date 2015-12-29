@@ -40,11 +40,21 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'jquery-rails'
 
+gem 'angularjs-rails'
+
+# for heroku
+gem 'rails_12factor'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'quiet_assets'
+end
+
+group :development, :test do
+  gem 'capybara'
+  gem 'byebug'
 end
