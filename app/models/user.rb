@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   def method_name
-    return "meowmeowmeow"
+    x = 50 * 293032
+    return x
   end
 end

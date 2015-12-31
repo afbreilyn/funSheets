@@ -42,9 +42,10 @@ gem 'spring',        group: :development
 gem 'devise'
 
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'jquery-rails'
 
 gem 'angularjs-rails'
+gem 'angular-rails-templates'
+gem 'bower-rails'
 
 # for heroku
 gem 'rails_12factor'
