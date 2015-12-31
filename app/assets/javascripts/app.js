@@ -1,2 +1,2 @@
-receta = angular.module('receta',[
+funSheets = angular.module('funSheets',[
 ])
