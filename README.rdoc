@@ -4,3 +4,4 @@ by noah allen bresley and afb
 
 * rails
 * random.org api
+* devise for auth
