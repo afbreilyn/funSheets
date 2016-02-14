@@ -1,0 +1,28 @@
+models ~>
+  classes
+  users
+    - is_admin? (boolean)
+  charactors
+    - religion  (string)
+    - name      (string)
+    - age       (int)
+  feats
+    - name          (string)
+    - prerequisits  (text)
+    - bonuss        (string)
+    - modifiers     (?)
+  skills
+    - is_class_skill  (boolean)
+    - is_untrained    (boolean)
+    - points          (int)
+    - modifier        (int)
+
+
+relations ~>
+  users:
+    have_many charactors
+  characters
+    have_many classes
+    have_many feats
+    have_many skills
+
