@@ -1,14 +1,15 @@
 <div class='container-fluid' ng-controller='mainController' >
   <div class='panel panel-success'>
     <div class='panel-heading'>
-      <h4 ng-if='name'> Hello, {{ name }} </h4>
+      <!-- <h4 ng-if='name'> Hello, {{ name }} </h4>
       <h4 ng-if='class'> {{ class }} </h4>
-      <h4 ng-if='level'> {{ level }} </h4>
+      <h4 ng-if='level'> {{ level }} </h4> -->
 
       <div ng-if='class =="Barbarian"'>
-        {{ barbarianLevels[ level ] }}
+        <!-- {{ barbarianLevels[ level ] }} -->
+        base:
+        {{ $base=barbarianLevels[ level ][ 'baseAttackBonus' ] }}
       </div>
-
 
       <!-- <h6 nf-if='skills'> Your skills are: {{ skills }} </h6> -->
     </div>
@@ -49,6 +50,10 @@
         </div>
       </form>
 
+      <!-- display stats -->
+      <div>
+        Base Attack Damage: {{ $base }}
+      </div>
       </br>
       </br>
 
