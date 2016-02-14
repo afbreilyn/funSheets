@@ -18,7 +18,6 @@ class CharactersController < ApplicationController
   end
 
   private
-
     def character_params
       params.require( :character ).permit( :name, :xp, :age )
     end

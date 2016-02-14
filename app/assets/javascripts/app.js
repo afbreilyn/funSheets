@@ -3,6 +3,17 @@ funSheets = angular.module('funSheets',[
 .controller( 'mainController', ['$scope', function( $scope ) {
     $scope.test = "hello world"
 
+    $scope.modifier = function ( value ) {
+      return value * 5
+    }
+
+
+
+    $scope.classNames = [
+      'Barbarian',
+      'Bard'
+    ]
+
     $scope.skills = [
       { name: 'Appraise',                                 untrained: 'Yes', key: 'Int',  value: 0, armor: false },
       { name: 'Balance',                                  untrained: 'Yes', key: 'Dex',  value: 0, armor: true },
@@ -48,9 +59,24 @@ funSheets = angular.module('funSheets',[
       { name: 'Swim',                                     untrained: 'Yes', key: 'Str',  value: 0, armor: true },
       { name: 'Tumble',                                   untrained: 'No',  key: 'Dex',  value: 0, armor: true },
       { name: 'Use Magic Device',                         untrained: 'No',  key: 'Cha',  value: 0, armor: false },
-      { name: 'Use Rope',                                 untrained: 'Yes', key: 'Dex',  value: 0, armor: false },
+      { name: 'Use Rope',                                 untrained: 'Yes', key: 'Dex',  value: 0, armor: false }
+    ]
 
-
+    $scope.barbarianLevels = [
+      {
+        baseAttackBonus: 1,
+        fort: 2,
+        red: 0,
+        will: 0,
+        special: ['fastMovement', 'illiteracy', 'rage 1/day']
+      },
+      {
+        baseAttackBonus: 2,
+        fort: 3,
+        red: 0,
+        will: 0,
+        special: []
+      }
     ]
 
 }]);

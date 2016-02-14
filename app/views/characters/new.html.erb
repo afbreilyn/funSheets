@@ -2,12 +2,20 @@
   <div class='panel panel-success'>
     <div class='panel-heading'>
       <h4 ng-if='name'> Hello, {{ name }} </h4>
-      <h6 nf-if='skills'> Your skills are: {{ skills }} </h6>
+      <h4 ng-if='class'> {{ class }} </h4>
+      <h4 ng-if='level'> {{ level }} </h4>
+
+      <div ng-if='class =="Barbarian"'>
+        {{ barbarianLevels[ level ] }}
+      </div>
+
+
+      <!-- <h6 nf-if='skills'> Your skills are: {{ skills }} </h6> -->
     </div>
 
     <div class='panel-body'>
+      <div> CHARACTER FIELDS </div>
       <form class='form-inline'>
-        <div> CHARACTER FIELDS </div>
         <div class='form-group'>
           <input 
             class='form-control'
@@ -16,29 +24,71 @@
             autofocus
             ng-model='name'
             >
-        </div>
-      </form>
-
-      </br>
-      </br>
-
-      <form class='form-inline'>
-        <div> SKILLS FIELDS </div> 
-        <div class='form-group' ng-repeat="skill in skills">
-          <input
+          <label> class </label>
+          <select class='form-control' ng-model='class'>
+            <option 
+              ng-repeat='className in classNames'
+              value='{{ className }}'
+              
+              >
+              {{ className }}
+            </option>
+          </select>
+          <label> level</label>
+          <select 
             class='form-control'
-            placeholder='0'
-            ng-model='skill["value"]'
+            ng-model='level'
             >
+            <option 
+              ng-repeat='className in classNames'
+              value='{{ $index }}'
+              >
+              {{ $index + 1 }}
+            </option>
+          </select>
         </div>
       </form>
 
+      </br>
+      </br>
+
+      <!-- SKILLS -->
+<!--       <div class='row'>
+        <div class='col-sm-12 col-md-12 col-lg-12'>
+          <form class='form-inline'>
+            <div> SKILLS FIELDS </div> 
+            <div class='form-group' ng-repeat="skill in skills">
+              <div class='row'>
+                <div class='col-sm-3 col-md-3 col-lg-3'>
+                  {{ skill['name'] }}
+                </div>
+                <div class='col-sm-3 col-md-3 col-lg-3'>
+                  <input
+                    class='form-control'
+                    placeholder='0'
+                    ng-model='skill["value"]'
+                    >
+                </div>
+                <div class='col-sm-1 col-md-1 col-lg-1'>
+                  {{ skill['untrained'] }}
+                </div>
+                <div class='col-sm-1 col-md-1 col-lg-1'>
+                  armor
+                </div>
+                <div class='col-sm-3 col-md-3 col-lg-3'>
+                  total: {{ modifier( skill["value"] ) }}
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div> -->
       </br>
       </br>
 
     </div>
     <div class=''>
-      {{ test }}
+      <!-- {{ test }} -->
     </div>
   </div>
 </div>
