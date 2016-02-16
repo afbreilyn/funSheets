@@ -1,5 +1,4 @@
-funSheets = angular.module('funSheets',[
-])
+funSheets = angular.module('funSheets',[])
 .controller( 'mainController', ['$scope', function( $scope ) {
     $scope.test = "hello world"
 
@@ -7,7 +6,7 @@ funSheets = angular.module('funSheets',[
       return value * 5
     }
 
-
+    $scope.base = 'boop'
 
     $scope.classNames = [
       'Barbarian',
@@ -79,4 +78,6 @@ funSheets = angular.module('funSheets',[
       }
     ]
 
-}]);
+}]
+
+);

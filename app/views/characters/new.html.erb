@@ -8,7 +8,9 @@
       <div ng-if='class =="Barbarian"'>
         <!-- {{ barbarianLevels[ level ] }} -->
         base:
-        {{ $base=barbarianLevels[ level ][ 'baseAttackBonus' ] }}
+        {{ base = barbarianLevels[ level ][ 'baseAttackBonus' ];"" }}
+        meow
+        {{ base }}
       </div>
 
       <!-- <h6 nf-if='skills'> Your skills are: {{ skills }} </h6> -->
@@ -52,7 +54,7 @@
 
       <!-- display stats -->
       <div>
-        Base Attack Damage: {{ $base }}
+        Base Attack Damage: {{ base }}
       </div>
       </br>
       </br>
